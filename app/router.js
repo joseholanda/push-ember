@@ -6,6 +6,13 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('itens');
+  this.route('processos');
+  this.route('pads');
+  this.route('dados-pessoais');
+  this.route('senha');
+  this.route('sair');
+  this.route('exclusao');
 });
 
 export default Router;

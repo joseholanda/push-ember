@@ -1,0 +1,13 @@
+<div class="input-group inscricao-oab">
+    <div class="input-group-btn">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{if uf uf "UF"}} <span class="caret"></span></button>
+        <ul class="dropdown-menu scrollable-dropdown">
+            {{#each ufs as |item|}}
+                <li><a href="#" {{action "selecionar" item}}>{{item}}</a></li>
+            {{/each}}
+        </ul>
+    </div>
+    <!-- /btn-group -->
+    {{input type="text" class="form-control" aria-label="..." placeholder="Nº inscrição" value=inscricao type="numeric"}}
+</div>
+<!-- /input-group -->

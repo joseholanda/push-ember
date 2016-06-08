@@ -1,0 +1,49 @@
+<div class="box box-info">
+  <div class="box-header with-border">
+    <h3 class="box-title">Cadastrar processo</h3>
+  </div>
+  <div class="box-body">
+    <div class="form-inline section">
+      <div class="form-group">
+        <label for="processo">Processo</label>
+        {{input id="processo" value=numeroDoProcesso class="form-control" placeholder="Número do processo..."}}
+      </div>
+      <button type="button" class="btn btn-default" {{action 'consultaProcesso'}}>Pesquisar</button>
+    </div>
+
+    <table class="table table-striped table-bordered section">
+      <thead>
+        <tr>
+          <th>Circunscrição</th>
+          <th>Juízo</th>
+          <th>Número do Processo</th>
+          <th>Feito</th>
+          <th>Andamentos</th>
+          <th>Excluir</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each processos as |processo|}}
+          <tr>
+            <td>{{processo.circunscricao}}</td>
+            <td>{{processo.vara}}</td>
+            <td>{{processo.numero}}</td>
+            <td>{{processo.feito}}</td>
+            <td>
+              <a href="{{processo.linkDoProcesso}}" target="_blank">
+                <span class="glyphicon glyphicon-search"></span>
+              </a>
+            </td>
+            <td>
+              <a href="#">
+                <span class="glyphicon glyphicon-remove"></span>
+              </a>
+            </td>
+          </tr>
+
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</div>
+{{yield}}
