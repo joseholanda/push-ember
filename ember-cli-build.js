@@ -31,8 +31,6 @@ module.exports = function(defaults) {
   app.import('bower_components/AdminLTE/dist/css/skins/skin-blue.min.css');
 
 
-
-
   app.import('bower_components/AdminLTE/bootstrap/js/bootstrap.min.js');
   app.import('bower_components/AdminLTE/dist/js/app.min.js');
 

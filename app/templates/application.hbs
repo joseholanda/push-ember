@@ -21,21 +21,9 @@
       <!-- Navbar Right Menu -->
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
-          <!-- Messages: style can be found in dropdown.less-->
 
-          <!-- Notifications: style can be found in dropdown.less -->
-
-          <!-- Tasks: style can be found in dropdown.less -->
-
-          <!-- User Account: style can be found in dropdown.less -->
-
-          <!-- Control Sidebar Toggle Button -->
           <li>
-            <button class="btn btn-default" data-toggle="control-sidebar">Toggle Right Sidebar</button>
-
-          </li>
-          <li>
-            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+            <a href="javascript:void(0);" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
           </li>
         </ul>
       </div>
@@ -84,6 +72,11 @@
             <i class="fa fa-bank"></i><span>Processo Administrativo</span>
           </a>
         {{/link-to}}
+        {{#link-to "sair" tagName="li" href=false}}
+          <a {{bind-attr href="sair"}}>
+            <i class="fa fa-sign-out"></i><span>Sair</span>
+          </a>
+        {{/link-to}}
       </ul>
       <!-- /.sidebar-menu -->
     </section>
@@ -127,26 +120,25 @@
 
   <!-- Control Sidebar -->
   <!-- The Right Sidebar -->
-  <aside class="control-sidebar control-sidebar-light">
-    <!-- Content of the sidebar goes here -->
-    <li>
-      {{#link-to "dados-pessoais"}}
-        <span class="glyphicon glyphicon-user" aria-hidden="true"></span> Dados pessoais{{/link-to}}
-    </li>
-    <li>
-      {{#link-to "senha"}}
-        <span class="glyphicon glyphicon-lock" aria-hidden="true"></span> Alterar senha{{/link-to}}
-    </li>
-    <li>
-      {{#link-to "exclusao"}}
-        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Excluir usuário{{/link-to}}
-    </li>
-    <li role="separator" class="divider"></li>
-    <li>
-      {{#link-to "sair"}}
-        <span class="glyphicon glyphicon-off"></span> Sair
-      {{/link-to}}
-    </li>
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Create the tabs -->
+    <div class="tab-content">
+      <ul class="control-sidebar-menu sidebar">
+        <li>
+          {{#link-to "dados-pessoais"}}
+            <span class="glyphicon glyphicon-user" aria-hidden="true"></span> Dados pessoais{{/link-to}}
+        </li>
+        <li>
+          {{#link-to "senha"}}
+            <span class="glyphicon glyphicon-lock" aria-hidden="true"></span> Alterar senha{{/link-to}}
+        </li>
+        <li>
+          {{#link-to "exclusao"}}
+            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Excluir usuário{{/link-to}}
+        </li>
+        <li role="separator" class="divider"></li>
+      </ul>
+    </div>
   </aside>
   <!-- The sidebar's background -->
   <!-- This div must placed right after the sidebar for it to work-->
